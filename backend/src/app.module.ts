@@ -8,11 +8,12 @@ import { ComprimentoService } from './comprimento/comprimento.service';
 import { VelocidadeService } from './velocidade/velocidade.service';
 =======
 import { TemperaturaService } from './temperatura/temperatura.service';
+import { TemperaturaController } from './temperatura/temperatura.controller';
 >>>>>>> 505d198f2286df2e5ba5d9e6c43d89ab7d26ae9a
 
 @Module({
   imports: [],
-  controllers: [AppController, ComprimentoController],
+  controllers: [AppController, ComprimentoController, TemperaturaController],
 <<<<<<< HEAD
   providers: [AppService, ConversorService, ComprimentoService, VelocidadeService],
 =======
