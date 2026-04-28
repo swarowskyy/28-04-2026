@@ -12,4 +12,8 @@ MetrosParaMilhas(valor:number){
 MetrosParaPes(valor:number){
     return valor/3281;
 }
+//area
+MetrosQuadradosParaKmQuadrado(valor:number){
+    return valor/
+}
 }
