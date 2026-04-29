@@ -89,10 +89,8 @@ localhost:3000/temperatura/fahrenheit-para-celsius/5000<br><br>
 
 <strong>🚀 Como Testar</strong><br>
 Certifique-se de que o servidor está rodando.
-
 Abra o seu navegador ou uma ferramenta como Postman/Insomnia.
-
-Digite a URL com o valor que deseja converter.<br><br>
+Digite a URL com o valor que deseja converter.<br>
 
 
 <strong>Exemplo prático:</strong><br>
