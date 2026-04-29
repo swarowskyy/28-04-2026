@@ -17,6 +17,7 @@ MetrosParaPes(valor:number){
 MetrosQuadradosParaKmQuadrado(valor:number){
     return valor/1000000;
 }
+
 MetrosQuadradosParaAcre(valor:number){
     return valor/ 4047;
 }
@@ -35,4 +36,14 @@ FahrenheitParaCelsius(valor:number){
     return valor - 32 / 1.8;
 }
 
+}
+//velocidade
+KmParaMetrosPorSegundo(valor:number){
+    return valor/3.6;
+}
+KmParaMilhasPorHora(valor:number){
+    return valor/1.609;
+}
+NósParaKm(valor:number){
+    return valor*1.852;
 }

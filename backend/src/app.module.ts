@@ -5,10 +5,12 @@ import { ConversorService } from './conversor/conversor.service';
 import { ComprimentoController } from './comprimento/comprimento.controller';
 import { AreaController } from './area/area.controller';
 import { TemperaturaController } from './temperatura/temperatura.controller';
+import { VelocidadeController } from './velocidade/velocidade.controller';
 
 @Module({
   imports: [],
-  controllers: [AppController, ComprimentoController, AreaController, TemperaturaController],
+  controllers: [AppController, ComprimentoController, AreaController, TemperaturaController, VelocidadeController],
+
   providers: [AppService, ConversorService],
 })
 export class AppModule {}
