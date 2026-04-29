@@ -20,13 +20,13 @@ MetrosQuadradosParaKmQuadrado(valor:number){
 
 //temperatura
 CelsiusParaFahrenheit(valor:number){
-    return valor/
+    return valor*1.8 + 32;
 }
 CelsiusParaKelvin(valor:number){
-    return valor/
+    return valor + 273.15
 }
 FahrenheitParaCelsius(valor:number){
-    return valor/
+    return valor - 32 / 1.8;
 }
 
 }

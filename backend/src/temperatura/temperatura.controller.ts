@@ -8,21 +8,21 @@ export class TemperaturaController {
     getfahrenheit(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.CelsiusParaFahrenheit(v),
-            unidade:'c'
+            unidade:'F'
         };
     }
     @Get('celsius-para-kelvin/:valor')
     getkelvin(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.CelsiusParaKelvin(v),
-            unidade:'k'
+            unidade:'K'
         };
     }
     @Get('fahrenheit-para-celsius/:valor')
     getcelsius(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.FahrenheitParaCelsius(v),
-            unidade:'f'
+            unidade:'C'
         };
     }
 }
