@@ -1,33 +1,28 @@
 
 import { Controller, Get, Param, ParseFloatPipe } from '@nestjs/common';
 import { ConversorService } from 'src/conversor/conversor.service';
-@Controller('massa')
-export class MassaController {}
 
-
-
-
-@Controller('Massa')//decorator de responsabilidade
-export class MassaControllerController {
+@Controller('massa')//decorator de responsabilidade
+export class MassaController {
     constructor(private readonly service:ConversorService){}
-    @Get('Quilos-para-Gramas/:valor')
+    @Get('quilos-para-gramas/:valor')
         getkg(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaKm(v),
-            unidade:'kg'
+            resultado:this.service.QuilosparaGramas(v),
+            unidade:'g'
         };
     }
-    @Get('Quilos-para-Libras/:valor')
+    @Get('quilos-para-libras/:valor')
         getib(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaMilhas(v),
+            resultado:this.service.QuilosparaLibras(v),
             unidade:'ib'
         };
     }
-    @Get('metros-para-pes/:valor')
+    @Get('quilos-para-onças/:valor')
         getoz(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaPes(v),
+            resultado:this.service.QuilosparaOnças(v),
             unidade:'oz'
         };
     }
