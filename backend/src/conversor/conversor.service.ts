@@ -17,6 +17,12 @@ MetrosParaPes(valor:number){
 MetrosQuadradosParaKmQuadrado(valor:number){
     return valor/1000000;
 }
+MetrosQuadradosParaAcre(valor:number){
+    return valor/ 4047;
+}
+MetrosquadradorParaPesQuadrados(valor:number){
+     return valor/10764;
+}
 
 //temperatura
 CelsiusParaFahrenheit(valor:number){

@@ -15,14 +15,14 @@ export class ComprimentoController {
         getmilha(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.MetrosParaMilhas(v),
-            unidade:'milhas'
+            unidade:'mi'
         };
     }
     @Get('metros-para-pes/:valor')
         getpes(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.MetrosParaPes(v),
-            unidade:'pés'
+            unidade:'ft'
         };
     }
 }
