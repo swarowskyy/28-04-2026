@@ -18,7 +18,7 @@ export class VelocidadeController {
             unidade:'mph'
         };
     }
-    @Get('nós-para-km/:valor')
+    @Get('nos-para-km/:valor')
         getpes(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.NósParaKm(v),

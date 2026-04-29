@@ -19,7 +19,7 @@ export class MassaController {
             unidade:'ib'
         };
     }
-    @Get('quilos-para-onças/:valor')
+    @Get('quilos-para-oncas/:valor')
         getoz(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.QuilosparaOnças(v),
