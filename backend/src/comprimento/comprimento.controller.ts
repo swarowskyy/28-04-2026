@@ -1,18 +1,33 @@
-import { Controller,Get, Param, ParseFloatPipe } from '@nestjs/common';
+
+import { Controller, Get, Param, ParseFloatPipe } from '@nestjs/common';
 import { ConversorService } from 'src/conversor/conversor.service';
 
 @Controller('comprimento')//decorator de responsabilidade
 export class ComprimentoController {
     constructor(private readonly service:ConversorService){}
-<<<<<<< HEAD
+
     @Get('metros-para-km/:valor')
         getKm(@Param('valor',ParseFloatPipe)v:number){
 
       return{
-        resultado:this.service.metrosParaKm(v),
+        resultado:this.service.MetrosParaKm(v),
         unidade:'km'
       };   }
+    
+    @Get('metros-para-milha/:valor')
+        getMilha(@Param('valor',ParseFloatPipe)v:number){
+        return{
+            resultado:this.service.MetrosParaMilhas(v),
+            unidade:'mi'
+        };
     }
-=======
+    @Get('metros-para-pes/:valor')
+        getpes(@Param('valor',ParseFloatPipe)v:number){
+        return{
+            resultado:this.service.MetrosParaPes(v),
+            unidade:'ft'
+        };
+    }
 }
->>>>>>> 505d198f2286df2e5ba5d9e6c43d89ab7d26ae9a
+
+

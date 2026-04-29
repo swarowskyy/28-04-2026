@@ -3,21 +3,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConversorService } from './conversor/conversor.service';
 import { ComprimentoController } from './comprimento/comprimento.controller';
-<<<<<<< HEAD
 import { ComprimentoService } from './comprimento/comprimento.service';
 import { VelocidadeService } from './velocidade/velocidade.service';
-=======
+import { MassaController } from './massa/massa.controller';
 import { TemperaturaService } from './temperatura/temperatura.service';
 import { TemperaturaController } from './temperatura/temperatura.controller';
->>>>>>> 505d198f2286df2e5ba5d9e6c43d89ab7d26ae9a
 
 @Module({
   imports: [],
-  controllers: [AppController, ComprimentoController, TemperaturaController],
-<<<<<<< HEAD
-  providers: [AppService, ConversorService, ComprimentoService, VelocidadeService],
-=======
-  providers: [AppService, ConversorService, TemperaturaService],
->>>>>>> 505d198f2286df2e5ba5d9e6c43d89ab7d26ae9a
+  controllers: [AppController, ComprimentoController, TemperaturaController, MassaController],
+  providers: [AppService, ConversorService, ComprimentoService, VelocidadeService,TemperaturaService ],
 })
-export class AppModule {}
+
+
