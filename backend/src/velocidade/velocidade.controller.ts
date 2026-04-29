@@ -1,4 +1,4 @@
-import { Controller,Get, Param, ParseFloatPipe } from '@nestjs/common';
+import { Controller, Get, Param, ParseFloatPipe } from '@nestjs/common';
 import { ConversorService } from 'src/conversor/conversor.service';
 
 @Controller('velocidade')
