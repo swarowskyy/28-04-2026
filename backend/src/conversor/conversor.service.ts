@@ -5,7 +5,7 @@ export class ConversorService {
 //comprimento
 MetrosParaKm(valor:number){
     return valor/1000;
- }
+}
 MetrosParaMilhas(valor:number){
     return valor/1609;
 }
@@ -46,5 +46,16 @@ KmParaMilhasPorHora(valor:number){
 }
 NósParaKm(valor:number){
     return valor*1.852;
+}
+
+//massa
+QuilosparaGramas(valor:number){
+    return valor*1000;
+}
+QuilosparaLibras(valor:number){
+    return valor*2205;
+}
+QuilosparaOnças(valor:number){
+    return valor*35274;
 }
 }

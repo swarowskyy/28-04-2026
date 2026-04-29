@@ -19,7 +19,7 @@ export class AreaController {
         };
     }
     @Get('metros-quadrados-para-pes-quadrados/:valor')
-        getpes(@Param('valor',ParseFloatPipe)v:number){
+        getpes(@Param('valor',ParseFloatPipe) v:number){
         return{
             resultado:this.service.MetrosParaPes(v),
             unidade:'ft²'
