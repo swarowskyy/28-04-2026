@@ -15,7 +15,20 @@ http://localhost:3000/area/metros-quadrados-para-acre/5000
 http://localhost:3000/area/metros-quadrados-para-pes-quadrados/5000
 
 # massa
-http://localhost:3000/Massa/Quilos-para-Gramas/5000
+http://localhost:3000/massa/quilos-para-gramas/5000
 
-http://localhost:3000/Massa/Quilos-para-Libras/5000
+http://localhost:3000/massa/quilos-para-libras/5000
 
+
+
+# velocidade
+
+
+
+
+# temperatura
+http://localhost:3000/temperatura/celsius-para-fahrenheit/5000
+
+http://localhost:3000/temperatura/celsius-para-kelvin/5000
+
+http://localhost:3000/temperatura/fahrenheit-para-celsius/5000
