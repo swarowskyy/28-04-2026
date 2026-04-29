@@ -4,7 +4,7 @@ import { ConversorService } from 'src/conversor/conversor.service';
 @Controller('velocidade')
 export class VelocidadeController {
     constructor(private readonly service:ConversorService){}
-    @Get('km-para-m/s /:valor')
+    @Get('km-para-m/s/:valor')
         getKm(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.KmParaMetrosPorSegundo(v),
@@ -18,7 +18,7 @@ export class VelocidadeController {
             unidade:'mph'
         };
     }
-    @Get('nós-para-km/:valor')
+    @Get('nos-para-km/:valor')
         getpes(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.NosParaKm(v),
