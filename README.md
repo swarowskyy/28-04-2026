@@ -15,4 +15,7 @@ http://localhost:3000/area/metros-quadrados-para-acre/5000
 http://localhost:3000/area/metros-quadrados-para-pes-quadrados/5000
 
 # massa
+http://localhost:3000/Massa/Quilos-para-Gramas/5000
+
+http://localhost:3000/Massa/Quilos-para-Libras/5000
 

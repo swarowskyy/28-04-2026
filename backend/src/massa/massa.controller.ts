@@ -8,21 +8,21 @@ export class MassaController {
     @Get('Quilos-para-Gramas/:valor')
         getkg(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaKm(v),
-            unidade:'kg'
+            resultado:this.service.QuilosparaGramas(v),
+            unidade:'g'
         };
     }
     @Get('Quilos-para-Libras/:valor')
         getib(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaMilhas(v),
+            resultado:this.service.QuilosparaLibras(v),
             unidade:'ib'
         };
     }
-    @Get('metros-para-pes/:valor')
+    @Get('Quilos-para-Onças/:valor')
         getoz(@Param('valor',ParseFloatPipe)v:number){
         return{
-            resultado:this.service.MetrosParaPes(v),
+            resultado:this.service.QuilosparaOnças(v),
             unidade:'oz'
         };
     }
