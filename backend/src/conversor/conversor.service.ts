@@ -29,3 +29,4 @@ FahrenheitParaCelsius(valor:number){
     return valor/
 }
 
+}
