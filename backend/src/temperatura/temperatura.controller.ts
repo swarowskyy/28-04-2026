@@ -5,21 +5,21 @@ import { ConversorService } from 'src/conversor/conversor.service';
 export class TemperaturaController {
     constructor(private readonly service:ConversorService){}
     @Get('celsius-para-fahrenheit/:valor')
-    getFahrenheit(@Param('valor',ParseFloatPipe)v:number){
+    getfahrenheit(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.CelsiusParaFahrenheit(v),
             unidade:'c'
         };
     }
     @Get('celsius-para-kelvin/:valor')
-    getKelvin(@Param('valor',ParseFloatPipe)v:number){
+    getkelvin(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.CelsiusParaKelvin(v),
             unidade:'k'
         };
     }
     @Get('fahrenheit-para-celsius/:valor')
-    getCelsius(@Param('valor',ParseFloatPipe)v:number){
+    getcelsius(@Param('valor',ParseFloatPipe)v:number){
         return{
             resultado:this.service.FahrenheitParaCelsius(v),
             unidade:'f'
