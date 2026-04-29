@@ -36,7 +36,7 @@ FahrenheitParaCelsius(valor:number){
     return valor - 32 / 1.8;
 }
 
-}
+
 //velocidade
 KmParaMetrosPorSegundo(valor:number){
     return valor/3.6;
@@ -46,4 +46,5 @@ KmParaMilhasPorHora(valor:number){
 }
 NósParaKm(valor:number){
     return valor*1.852;
+}
 }
