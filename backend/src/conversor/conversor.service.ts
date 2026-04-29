@@ -15,7 +15,7 @@ MetrosParaPes(valor:number){
 
 //area
 MetrosQuadradosParaKmQuadrado(valor:number){
-    return valor/
+    return valor/1000000;
 }
 
 //temperatura
