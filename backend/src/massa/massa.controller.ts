@@ -1,11 +1,9 @@
 
 import { Controller, Get, Param, ParseFloatPipe } from '@nestjs/common';
 import { ConversorService } from 'src/conversor/conversor.service';
-@Controller('massa')
-export class MassaController {}
 
 @Controller('Massa')//decorator de responsabilidade
-export class MassaControllerController {
+export class MassaController {
     constructor(private readonly service:ConversorService){}
     @Get('Quilos-para-Gramas/:valor')
         getkg(@Param('valor',ParseFloatPipe)v:number){
