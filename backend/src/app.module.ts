@@ -14,7 +14,7 @@ import { ComprimentoService } from './comprimento/comprimento.service';
   imports: [],
   providers: [AppService, ConversorService, ComprimentoService ],
   controllers: [AppController, ComprimentoController, AreaController, TemperaturaController, VelocidadeController, MassaController],
-  providers: [AppService, ConversorService],
+ 
 })
 
-
+export class AppModule {}
