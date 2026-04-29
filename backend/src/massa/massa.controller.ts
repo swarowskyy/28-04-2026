@@ -4,9 +4,6 @@ import { ConversorService } from 'src/conversor/conversor.service';
 @Controller('massa')
 export class MassaController {}
 
-
-
-
 @Controller('Massa')//decorator de responsabilidade
 export class MassaControllerController {
     constructor(private readonly service:ConversorService){}
