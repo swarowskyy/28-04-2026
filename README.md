@@ -1,10 +1,10 @@
-<strong>⚖️Documentação da API de Conversão de Medidas</strong><br><br>
-Esta API foi desenvolvida para realizar conversões de unidades de medida de forma simples através de rotas HTTP.🚀<br>
+<strong>⚖️Documentação da API de Conversão de Medidas</strong><br>
+Esta API foi desenvolvida para realizar conversões de unidades de medida de forma simples através de rotas HTTP.🚀<br><br>
 
 
-<strong>📍 Endereço Base</strong><br><br>
+<strong>📍 Endereço Base</strong><br>
 A estrutura das rotas segue o padrão:
-http://localhost:3000/[categoria]/[tipo-de-conversao]/[valor]
+http://localhost:3000/[categoria]/[tipo-de-conversao]/[valor]<br><br>
 
 
 <strong>🛠️ Funcionalidades e Rotas</strong><br>
