@@ -1,58 +1,65 @@
-<strong>Documentação da API de Conversão de Medidas</strong>
-Esta API foi desenvolvida para realizar conversões de unidades de medida de forma simples através de rotas HTTP. A API responde localmente no endereço http://localhost:3000.
+<strong>⚖️Documentação da API de Conversão de Medidas</strong>
+Esta API foi desenvolvida para realizar conversões de unidades de medida de forma simples através de rotas HTTP.🚀
 
-Estrutura Base da URL
+<strong>📍 Endereço Base</strong>
 A estrutura das rotas segue o padrão:
 http://localhost:3000/[categoria]/[tipo-de-conversao]/[valor]
 
-1. Comprimento 
-Transforma unidades de distância e extensão.
+<strong>🛠️ Funcionalidades e Rotas</strong>
+Abaixo estão as categorias disponíveis e seus respectivos caminhos para conversão:
 
-Metros para Quilómetros: /comprimento/metros-para-km/[valor]
+📏 Comprimento
+Ideal para medir distâncias e extensões.
 
-Metros para Milhas: /comprimento/metros-para-milha/[valor]
+Metros ➡️ Quilômetros: /comprimento/metros-para-km/[valor]
 
-Metros para Pés: /comprimento/metros-para-pes/[valor]
+Metros ➡️ Milhas: /comprimento/metros-para-milha/[valor]
 
-2. Área
-Utilizada para conversão de medidas de superfície.
+Metros ➡️ Pés: /comprimento/metros-para-pes/[valor]
 
-Metros Quadrados para Quilómetros Quadrados: /area/metros-quadrados-para-km-quadrado/[valor]
+🗺️ Área
+Para cálculos de superfícies e terrenos.
 
-Metros Quadrados para Acres: /area/metros-quadrados-para-acre/[valor]
+m² ➡️ km²: /area/metros-quadrados-para-km-quadrado/[valor]
 
-Metros Quadrados para Pés Quadrados: /area/metros-quadrados-para-pes-quadrados/[valor]
+m² ➡️ Acres: /area/metros-quadrados-para-acre/[valor]
 
-3. Massa
-Conversão de pesos e quantidades de matéria.
+m² ➡️ Pés Quadrados: /area/metros-quadrados-para-pes-quadrados/[valor]
 
-Quilos para Gramas: /massa/quilos-para-gramas/[valor]
+⚖️ Massa
+Conversão de pesos e cargas.
 
-Quilos para Libras: /massa/quilos-para-libras/[valor]
+Quilos ➡️ Gramas: /massa/quilos-para-gramas/[valor]
 
-Quilos para Onças: /massa/quilos-para-oncas/[valor]
+Quilos ➡️ Libras: /massa/quilos-para-libras/[valor]
 
-4. Velocidade
-Para cálculos de deslocamento por tempo.
+Quilos ➡️ Onças: /massa/quilos-para-oncas/[valor]
 
-Quilómetros por Hora para Metros por Segundo: /velocidade/km-para-m/s/[valor]
+🏎️ Velocidade
+Para quem precisa de rapidez nos cálculos de deslocamento.
 
-Quilómetros por Hora para Milhas por Hora: /velocidade/km-para-mph/[valor]
+km/h ➡️ m/s: /velocidade/km-para-m/s/[valor]
 
-Nós para Quilómetros por Hora: /velocidade/nos-para-km/[valor]
+km/h ➡️ mph: /velocidade/km-para-mph/[valor]
 
-5. Temperatura
-Conversão entre as principais escalas térmicas.
+Nós ➡️ km/h: /velocidade/nos-para-km/[valor]
 
-Celsius para Fahrenheit: /temperatura/celsius-para-fahrenheit/[valor]
+🌡️ Temperatura
+Ajuste suas escalas térmicas num piscar de olhos.
 
-Celsius para Kelvin: /temperatura/celsius-para-kelvin/[valor]
+Celsius 🌡️ Fahrenheit: /temperatura/celsius-para-fahrenheit/[valor]
 
-Fahrenheit para Celsius: /temperatura/fahrenheit-para-celsius/[valor]
+Celsius 🌡️ Kelvin: /temperatura/celsius-para-kelvin/[valor]
 
-Como usar
-Para utilizar a API, basta realizar uma requisição GET utilizando qualquer ferramenta (como o navegador, Insomnia ou Postman) inserindo o valor desejado ao final da URL.
+Fahrenheit 🌡️ Celsius: /temperatura/fahrenheit-para-celsius/[valor]
 
-Exemplo:
-Para converter 5000 metros em quilómetros, aceda a:
-http://localhost:3000/comprimento/metros-para-km/5000
+🚀 Como Testar
+Certifique-se de que o servidor está rodando.
+
+Abra o seu navegador ou uma ferramenta como Postman/Insomnia.
+
+Digite a URL com o valor que deseja converter.
+
+Exemplo prático:
+Para descobrir quantos quilômetros existem em 5000 metros:
+👉 http://localhost:3000/comprimento/metros-para-km/5000
