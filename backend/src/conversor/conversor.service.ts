@@ -16,4 +16,14 @@ MetrosParaPes(valor:number){
 MetrosQuadradosParaKmQuadrado(valor:number){
     return valor/
 }
+KmParaMetrosPorSegundo(valor:number){
+    return valor/3.6;
 }
+KmParaMilhasPorHora(valor:number){
+    return valor/1.609;
+}
+NósParaKm(valor:number){
+    return valor*1.852;
+}
+}
+
