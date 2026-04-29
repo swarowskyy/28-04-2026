@@ -14,6 +14,13 @@ MetrosParaPes(valor:number){
 }
 //area
 MetrosQuadradosParaKmQuadrado(valor:number){
-    return valor/
+    return valor/1000000;
+}
+MetrosQuadradosParaAcre(valor:number){
+    return valor/ 4047;
+}
+MetrosquadradorParaPesQuadrados(valor:number){
+     return valor/10764;
+
 }
 }
