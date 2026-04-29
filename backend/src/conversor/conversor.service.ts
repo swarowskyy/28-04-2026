@@ -16,4 +16,17 @@ MetrosParaPes(valor:number){
 MetrosQuadradosParaKmQuadrado(valor:number){
     return valor/
 }
+// Quilos
+ QuilosparaGramas(valor:number){
+ return valor*1000;
+ }
+ //Libras
+ QuilosparaLibras(valor:number){
+    return valor*2205;
+ }
+ //Onças
+ QuilosparaOnças(valor:number){
+    return valor*35274;
+
 }
+
