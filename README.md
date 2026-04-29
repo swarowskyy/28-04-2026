@@ -8,11 +8,11 @@ http://localhost:3000/[categoria]/[tipo-de-conversao]/[valor]<br><br>
 
 
 <strong>🛠️ Funcionalidades e Rotas</strong><br>
-Abaixo estão as categorias disponíveis e seus respectivos caminhos para conversão:
+Abaixo estão as categorias disponíveis e seus respectivos caminhos para conversão:<br><br>
 
 
 <strong>📏 Comprimento</strong><br>
-Ideal para medir distâncias e extensões.
+Ideal para medir distâncias e extensões.<br>
 
 
 Metros ➡️ Quilômetros: /comprimento/metros-para-km/5000
@@ -21,10 +21,10 @@ Metros ➡️ Quilômetros: /comprimento/metros-para-km/5000
 Metros ➡️ Milhas: /comprimento/metros-para-milha/5000
 
 
-Metros ➡️ Pés: /comprimento/metros-para-pes/5000
+Metros ➡️ Pés: /comprimento/metros-para-pes/5000<br><br>
 
 <strong>🗺️ Área</strong><br>
-Para cálculos de superfícies e terrenos.
+Para cálculos de superfícies e terrenos.<br>
 
 
 m² ➡️ km²: /area/metros-quadrados-para-km-quadrado/5000
@@ -33,7 +33,7 @@ m² ➡️ km²: /area/metros-quadrados-para-km-quadrado/5000
 m² ➡️ Acres: /area/metros-quadrados-para-acre/5000
 
 
-m² ➡️ Pés Quadrados: /area/metros-quadrados-para-pes-quadrados/5000
+m² ➡️ Pés Quadrados: /area/metros-quadrados-para-pes-quadrados/5000<br><br>
 
 
 <strong>⚖️ Massa</strong><br>
@@ -46,7 +46,7 @@ Quilos ➡️ Gramas: /massa/quilos-para-gramas/5000
 Quilos ➡️ Libras: /massa/quilos-para-libras/5000
 
 
-Quilos ➡️ Onças: /massa/quilos-para-oncas/5000
+Quilos ➡️ Onças: /massa/quilos-para-oncas/5000<br><br>
 
 
 <strong>🏎️ Velocidade</strong><br>
@@ -59,7 +59,7 @@ km/h ➡️ m/s: /velocidade/km-para-m/s/5000
 km/h ➡️ mph: /velocidade/km-para-mph/5000
 
 
-Nós ➡️ km/h: /velocidade/nos-para-km/5000
+Nós ➡️ km/h: /velocidade/nos-para-km/5000<br><br>
 
 
 <strong>🌡️ Temperatura</strong><br>
@@ -72,7 +72,7 @@ Celsius 🌡️ Fahrenheit: /temperatura/celsius-para-fahrenheit/5000
 Celsius 🌡️ Kelvin: /temperatura/celsius-para-kelvin/5000
 
 
-Fahrenheit 🌡️ Celsius: /temperatura/fahrenheit-para-celsius/5000
+Fahrenheit 🌡️ Celsius: /temperatura/fahrenheit-para-celsius/5000<br><br>
 
 
 <strong>🚀 Como Testar</strong><br>
@@ -82,7 +82,7 @@ Certifique-se de que o servidor está rodando.
 Abra o seu navegador ou uma ferramenta como Postman/Insomnia.
 
 
-Digite a URL com o valor que deseja converter.
+Digite a URL com o valor que deseja converter.<br><br>
 
 
 <strong>Exemplo prático:</strong><br>
