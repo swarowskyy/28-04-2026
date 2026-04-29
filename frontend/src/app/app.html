@@ -1,36 +1,150 @@
-   Calculadora <span class="font-semibold text-emerald-900">IMC</span>
-    </h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertaPro | Design Moderno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-6">
 
-    <div class="space-y-4">
-      <input 
-        type="number" 
-        [(ngModel)]="comprimento" 
-        placeholder="Metros Para Km (km)"
-        class="w-full px-6 py-4 bg-slate-50 border-transparent rounded-2xl outline-none focus:ring-2 focus:ring-emerald-100 focus:bg-white transition-all text-slate-700 placeholder:text-slate-300"
-      >
-      
-      <input 
-        type="number" 
-        [(ngModel)]="altura" 
-        placeholder="altura (mi)"
-        class="w-full px-6 py-4 bg-slate-50 border-transparent rounded-2xl outline-none focus:ring-2 focus:ring-emerald-100 focus:bg-white transition-all text-slate-700 placeholder:text-slate-300"
-      >
+    <div class="glass w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+        
+        <div class="bg-indigo-900 text-white p-8 md:w-1/3">
+            <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
+                <i class="fas fa-exchange-alt text-indigo-400"></i> ConvertaPro
+            </h1>
+            <nav class="space-y-4">
+                <button onclick="changeCategory('comprimento')" class="nav-btn active w-full text-left p-3 rounded-xl bg-indigo-800 hover:bg-indigo-700 transition">
+                    <i class="fas fa-ruler-combined mr-2"></i> Comprimento
+                </button>
+                <button onclick="changeCategory('area')" class="nav-btn w-full text-left p-3 rounded-xl hover:bg-indigo-800 transition">
+                    <i class="fas fa-chart-area mr-2"></i> Área
+                </button>
+                <button onclick="changeCategory('temperatura')" class="nav-btn w-full text-left p-3 rounded-xl hover:bg-indigo-800 transition">
+                    <i class="fas fa-thermometer-half mr-2"></i> Temperatura
+                </button>
+                <button onclick="changeCategory('velocidade')" class="nav-btn w-full text-left p-3 rounded-xl hover:bg-indigo-800 transition">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Velocidade
+                </button>
+                <button onclick="changeCategory('massa')" class="nav-btn w-full text-left p-3 rounded-xl hover:bg-indigo-800 transition">
+                    <i class="fas fa-weight-hanging mr-2"></i> Massa
+                </button>
+            </nav>
+        </div>
 
-      <button (click)="calcular()" class="w-full bg-slate-900 hover:bg-emerald-950 text-emerald-50 font-medium py-5 rounded-2xl transition-all duration-300 shadow-lg shadow-slate-200 active:scale-[0.98] mt-2">
-        Calcular IMC
-      </button>
+        <div class="p-8 md:w-2/3 bg-white">
+            <h2 id="category-title" class="text-3xl font-extrabold text-gray-800 mb-6 uppercase tracking-tight">Comprimento</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-500 mb-2">Valor de Entrada</label>
+                    <input type="number" id="inputValue" placeholder="Digite o valor..." 
+                        class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-indigo-500 focus:outline-none text-xl font-semibold transition">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-500 mb-2">Tipo de Conversão</label>
+                    <select id="conversionType" class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-indigo-500 focus:outline-none bg-white font-medium transition cursor-pointer">
+                        </select>
+                </div>
+
+                <button onclick="convert()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl shadow-lg transform hover:-translate-y-1 transition duration-200">
+                    Converter Agora
+                </button>
+
+                <div id="resultBox" class="mt-8 p-6 bg-indigo-50 rounded-2xl border border-indigo-100 hidden">
+                    <p class="text-indigo-600 text-sm font-bold uppercase tracking-widest mb-1">Resultado Final</p>
+                    <div id="resultValue" class="text-4xl font-black text-indigo-900">0.00</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div *ngIf="resultado" class="mt-8 pt-8 border-t border-slate-50 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <h3 class="text-[10px] font-bold tracking-[0.2em] text-emerald-600/60 uppercase mb-4">
-        Diagnóstico
-      </h3>
-      
-      <p class="text-4xl font-light text-slate-800 mb-2">
-        <span class="text-sm text-slate-400 block text-center mb-1 font-normal uppercase tracking-widest">Seu IMC</span>
-        {{resultado.imc}}
-      </p>
-      
-      <p class="px-6 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold tracking-wide border border-emerald-100">
-        {{resultado.resultado}}
-      </p>
+    <script>
+        const categories = {
+            comprimento: [
+                { label: 'Metros para Km', endpoint: 'MetrosParaKm' },
+                { label: 'Metros para Milhas', endpoint: 'MetrosParaMilhas' },
+                { label: 'Metros para Pés', endpoint: 'MetrosParaPes' }
+            ],
+            area: [
+                { label: 'm² para Km²', endpoint: 'MetrosQuadradosParaKmQuadrado' },
+                { label: 'm² para Acre', endpoint: 'MetrosQuadradosParaAcre' },
+                { label: 'm² para Pés²', endpoint: 'MetrosquadradorParaPesQuadrados' }
+            ],
+            temperatura: [
+                { label: 'Celsius para Fahrenheit', endpoint: 'CelsiusParaFahrenheit' },
+                { label: 'Celsius para Kelvin', endpoint: 'CelsiusParaKelvin' },
+                { label: 'Fahrenheit para Celsius', endpoint: 'FahrenheitParaCelsius' }
+            ],
+            velocidade: [
+                { label: 'Km para m/s', endpoint: 'KmParaMetrosPorSegundo' },
+                { label: 'Km para MPH', endpoint: 'KmParaMilhasPorHora' },
+                { label: 'Nós para Km', endpoint: 'NósParaKm' }
+            ],
+            massa: [
+                { label: 'Quilos para Gramas', endpoint: 'QuilosparaGramas' },
+                { label: 'Quilos para Libras', endpoint: 'QuilosparaLibras' },
+                { label: 'Quilos para Onças', endpoint: 'QuilosparaOnças' }
+            ]
+        };
+
+        function changeCategory(cat) {
+            // Atualiza título
+            document.getElementById('category-title').innerText = cat;
+            
+            // Limpa e popula o select
+            const select = document.getElementById('conversionType');
+            select.innerHTML = '';
+            categories[cat].forEach(opt => {
+                const el = document.createElement('option');
+                el.value = opt.endpoint;
+                el.innerText = opt.label;
+                select.appendChild(el);
+            });
+
+            // Estilo visual dos botões laterais
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-indigo-800'));
+            event.currentTarget.classList.add('bg-indigo-800');
+        }
+
+        async function convert() {
+            const valor = document.getElementById('inputValue').value;
+            const endpoint = document.getElementById('conversionType').value;
+            
+            if(!valor) return alert("Por favor, digite um valor.");
+
+            try {
+                // Ajuste a URL abaixo para a rota real do seu Controller NestJS
+                const response = await fetch(`http://localhost:3000/conversor/${endpoint}/${valor}`);
+                const data = await response.json();
+
+                const resultBox = document.getElementById('resultBox');
+                const resultValue = document.getElementById('resultValue');
+                
+                resultBox.classList.remove('hidden');
+                // Formatação simples para não ficar um número gigante
+                resultValue.innerText = Number(data).toLocaleString('pt-BR', { maximumFractionDigits: 4 });
+            } catch (error) {
+                alert("Erro ao conectar com o servidor. Verifique o CORS no NestJS.");
+            }
+        }
+
+        // Inicializa a primeira categoria
+        changeCategory('comprimento');
+    </script>
+</body>
+</html>
