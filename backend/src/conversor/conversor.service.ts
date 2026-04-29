@@ -15,13 +15,13 @@ MetrosParaPes(valor:number){
 //area
 MetrosQuadradosParaKmQuadrado(valor:number){
     return valor/
-}
+}//velocidade
 KmParaMetrosPorSegundo(valor:number){
     return valor/3.6;
-}
+}//velocidade
 KmParaMilhasPorHora(valor:number){
     return valor/1.609;
-}
+}//velocidade
 NósParaKm(valor:number){
     return valor*1.852;
 }
